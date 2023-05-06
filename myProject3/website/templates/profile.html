@@ -9,7 +9,8 @@
     <img id="profilePic1" class="profilePic1" src="/static/images/enterprise.png" width="200" height="200" style="text-align:center;"/>
     <img id="profilePic2" class="profilePic2" src="/static/images/phaser.png" width="200" height="200" style="text-align:center;"/>
     <img id="profilePic3" class="profilePic3" src="/static/images/communicator.png" width="200" height="200" style="text-align:center;"/>
-    
+    <img id="profilePic4" class="profilePic4" src="/static/images/starfleet_pin.png" width="200" height="200" style="text-align:center;"/>
+    <img id="profilePic5" class="profilePic5" src="/static/images/tricorder.png" width="200" height="200" style="text-align:center;"/>
 </div>
 
 <script>
@@ -17,8 +18,7 @@
        // set the pic views
        if((sessionStorage.getItem("Pic1") == "index" || sessionStorage.getItem("Pic1") == null) && $("#profilePic1").is(":visible")) {
            $("#profilePic1").toggle();
-           
-       }
+        }
 
        if((sessionStorage.getItem("Pic2") == "index" || sessionStorage.getItem("Pic2") == null) && $("#profilePic2").is(":visible")) {
            $("#profilePic2").toggle();
@@ -26,6 +26,14 @@
 
        if((sessionStorage.getItem("Pic3") == "index" || sessionStorage.getItem("Pic3") == null) && $("#profilePic3").is(":visible")) {
            $("#profilePic3").toggle();
+       }
+
+       if((sessionStorage.getItem("Pic4") == "index" || sessionStorage.getItem("Pic4") == null) && $("#profilePic4").is(":visible")) {
+           $("#profilePic4").toggle();
+       }
+
+       if((sessionStorage.getItem("Pic5") == "index" || sessionStorage.getItem("Pic5") == null) && $("#profilePic5").is(":visible")) {
+           $("#profilePic5").toggle();
        }
 
        $("img").click(function(){

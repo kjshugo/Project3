@@ -14,6 +14,8 @@
             sessionStorage.setItem("Pic1", "index");
             sessionStorage.setItem("Pic2", "index");
             sessionStorage.setItem("Pic3", "index");
+            sessionStorage.setItem("Pic4", "index");
+            sessionStorage.setItem("Pic5", "index");
         }
     }
 </script> 
@@ -24,6 +26,8 @@
     <img id="indexPic1" class="indexPic1" src="/static/images/enterprise.png" width="200" height="200" style="text-align:center;"/>
     <img id="indexPic2" class="indexPic2" src="/static/images/phaser.png" width="200" height="200" style="text-align:center;"/>
     <img id="indexPic3" class="indexPic3" src="/static/images/communicator.png" width="200" height="200" style="text-align:center;"/>
+    <img id="indexPic4" class="indexPic4" src="/static/images/starfleet_pin.png" width="200" height="200" style="text-align:center;"/>
+    <img id="indexPic5" class="indexPic5" src="/static/images/tricorder.png" width="200" height="200" style="text-align:center;"/>
 </div>
 
 <script>
@@ -39,6 +43,14 @@
 
         if(sessionStorage.getItem("Pic3") == "profile" && $("#indexPic3").is(":visible")) {
             $("#indexPic3").toggle();
+        }
+
+        if(sessionStorage.getItem("Pic4") == "profile" && $("#indexPic4").is(":visible")) {
+            $("#indexPic4").toggle();
+        }
+
+        if(sessionStorage.getItem("Pic5") == "profile" && $("#indexPic5").is(":visible")) {
+            $("#indexPic5").toggle();
         }
 
         $("img").click(function(){
