@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<h1>HOMEPAGE!!</h1><br>
+<h3>(Click on any image to move it to the Profile Page:)</h3>
+
+<!-- Set Session Storage on first load-->
+<script>
+    function myFunction() {
+        var x = sessionStorage.length;
+        
+        if(x = 0) {
+            sessionStorage.setItem("Pic1", "index");
+            sessionStorage.setItem("Pic2", "index");
+        }
+    }
+</script> 
+    
+
+
+<div id="indexPics">
+    <img id="indexPic1" class="indexPic1" src="/static/images/enterprise.png" width="200" height="200" style="text-align:center;"/>
+    <img id="indexPic2" class="indexPic2" src="/static/images/phaser.png" width="200" height="200" style="text-align:center;"/>
+</div>
+
+<script>
+    $(document).ready(function(){
+        // set the pic views
+        if(sessionStorage.getItem("Pic1") == "profile" && $("#indexPic1").is(":visible")) {
+            $("#indexPic1").toggle();
+        }
+
+        if(sessionStorage.getItem("Pic2") == "profile" && $("#indexPic2").is(":visible")) {
+            $("#indexPic2").toggle();
+        }
+
+        $("img").click(function(){
+            var picSelect = "#" + this.id;
+            var profilePic = "#profilePic" + picSelect[9];
+            var profilePicSelect = "Pic" + picSelect[9];
+            $(picSelect).toggle();
+            sessionStorage.setItem(profilePicSelect, "profile");
+        });
+    });
+</script>
+
+{% endblock %}

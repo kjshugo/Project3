@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Profile Page...</h1>
+
+<div id="profilePics">
+    <img id="profilePic1" class="profilePic1" src="/static/images/enterprise.png" width="200" height="200" style="text-align:center;"/>
+    <img id="profilePic2" class="profilePic2" src="/static/images/phaser.png" width="200" height="200" style="text-align:center;"/>
+    
+</div>
+
+<script>
+    $(document).ready(function(){
+       // set the pic views
+       if((sessionStorage.getItem("Pic1") == "index" || sessionStorage.getItem("Pic1") == null) && $("#profilePic1").is(":visible")) {
+           $("#profilePic1").toggle();
+           
+       }
+
+       if((sessionStorage.getItem("Pic2") == "index" || sessionStorage.getItem("Pic2") == null) && $("#profilePic2").is(":visible")) {
+           $("#profilePic2").toggle();
+       }
+
+       $("img").click(function(){
+           var picSelect = "#" + this.id;
+           var profilePic = "#indexPic" + picSelect[11];
+           var profilePicSelect = "Pic" + picSelect[11];
+           $(picSelect).toggle();
+           sessionStorage.setItem(profilePicSelect, "index");
+       });
+   });
+</script>
+
+{% endblock %}
