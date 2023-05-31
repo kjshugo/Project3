@@ -3,6 +3,8 @@ Project 3 (Auth Ken Sears 2023)
 Created working Django based website where pictures move from the Home Page to the Portfolio page (and reverse) when clicked.
 Started with 2 images and got that working using sessionStatus as the 'moving vehicle' and uploaded to Github.
 
+Deployed to GitHub Pages with URL: https://kjshugo.github.io/Project3/
+
 File List :-
 
 Main Directory Files:
